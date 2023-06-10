@@ -83,7 +83,7 @@ html, body{
 
 #home{
     width: 100%;
-    height: 350vh;
+    height: auto;
     background: #fafafa;
    
 
@@ -309,6 +309,7 @@ html, body{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    height: 100vh;
     margin-top: 6vw;
     position: relative;
     width: 100%;
