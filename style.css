@@ -83,25 +83,29 @@ html, body{
 
 #home{
     width: 100%;
-    height: 150vh;
-    background: #f0f0f0;
+    height: 350vh;
+    background: #fafafa;
+   
 
 }
-#home #nav{
+#nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
     width: 100%;
+    z-index: 10;
     height: 100px;
+   
+    
 }
 #nav a{
-    position: relative;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 300;
+   
 }
 #nav a .line{
     position: absolute;
@@ -110,6 +114,7 @@ html, body{
     display:inline-block;
     height: 1px;
     background: black;
+   
 }
 #line1{
     left: 0;
@@ -174,12 +179,14 @@ html, body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 7vw;
-    margin-top: 22vw;
+    padding: 7vw 7vw;
+    margin-top: 15vw;
+    
 }
 #imagery .imgleft{
     width: 40%;
     height: auto;
+    z-index: 1;
    
 }
 
@@ -213,14 +220,14 @@ html, body{
     position: absolute;
     width: 27vw;
     height: 40vw;
-    border-radius: 1rem;
+    border-radius: 1vw;
     filter: grayscale();
     transition: cubic-bezier(0.19, 1, 0.22, 1) 1.4s;
+    z-index: 1;
 }
 
 .imgright .imgcontainer:hover{
-    filter: grayscale(0);
-    
+    filter: grayscale(0); 
     cursor: pointer;
 }
 
@@ -236,12 +243,91 @@ html, body{
     background-image: url("https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
     background-size: cover;
     background-position: center;
-
 }
 
 .imgright .imgcontainer:nth-child(3){
     transform: translate(20%, 10%) rotate(-5deg);
     background-image: url("https://images.unsplash.com/photo-1610276198568-eb6d0ff53e48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80");
     background-size: cover;
+}
 
+#work {
+    padding-top:150px;
+    position: relative;
+    background-color: #f2f2f2;
+    width: 100%;
+    min-height: 70vh;
+    margin-top: 10vw;
+}
+#work::before {
+    content: "";
+    position: absolute;
+    top:-75px;
+    transform: rotate(-180deg);
+    width: 100%;
+    height: 150px;
+    background-image: url("https://abhishekjha.me/rip.f6d7c4dd.svg");   
+    background-size: cover;
+}
+#work .workrow{
+    padding: 0 7vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.workrow h1{
+    display: flex;
+    align-items: baseline;
+    font-size: 7vw;
+    font-weight: 500;
+}
+.workrow i{
+    font-size: 3vw; 
+    color: #14cf93;
+    color: gray;
+    transform: rotate(180deg);
+}
+
+.workrow h1 .r{
+    color: #14cf93;
+    font-family:cursive ;
+}
+.workrow h1 .mini{
+    font-size: 2vw;
+    font-weight: 500;
+    margin-left: 4vw;
+   
+}
+.o-ui-arrow {
+    stroke: rgb(158, 158, 158);
+    transform: rotate(90deg);
+    width: 5vw;
+}
+
+#images{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 6vw;
+    position: relative;
+    width: 100%;
+    padding: 0 5vw;
+}
+
+.container{  
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.container img{
+    width: 105%;
+}
+
+.container1{
+    width: 55%;
+}
+
+.container2{
+    width: 28%;
 }

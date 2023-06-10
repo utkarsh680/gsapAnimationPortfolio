@@ -88,9 +88,16 @@ function AnimateHomePage(){
     })
    
 }
+
+function logoInitialize(){    
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('#main'),
+        smooth: true
+    });
+}
 reavealToSpan();
 valueSetters();
 loaderAnimation();
 
-
+logoInitialize();
 
