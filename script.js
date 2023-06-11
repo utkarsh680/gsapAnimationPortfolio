@@ -95,9 +95,36 @@ function logoInitialize(){
         smooth: true
     });
 }
+
+function cardHoverEffect(){
+    document.querySelectorAll('.container')
+    .forEach(function(container){
+        var showingImage;
+        container.addEventListener('mousemove', function(dots){
+        document.querySelector("#cursor").children[dots.target.dataset.index].style.opacity = 1;
+        showingImage = dots.target;
+        console.log(dots.clientX, dots.clientY)
+        document.querySelector("#cursor").children[dots.target.dataset.index].style.transform = `translate(${dots.clientX}px, ${dots.clientY}px)`;
+        showingImage.style.filter = "grayscale()"; 
+
+        document.querySelector("#work").style.backgroundColor = "#" + dots.target.dataset.color;
+        })
+        container.addEventListener('mouseleave', function(dots){
+
+            document.querySelector("#cursor").children[showingImage.dataset.index].style.opacity = 0;
+            showingImage.style.filter = "grayscale(0)";
+            document.querySelector("#work").style.backgroundColor = "#f2f2f2";
+
+        }
+        )
+    })
+
+  
+}
+
 reavealToSpan();
 valueSetters();
 loaderAnimation();
-
 logoInitialize();
+cardHoverEffect();
 
