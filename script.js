@@ -83,10 +83,59 @@ function AnimateHomePage(){
     })
     tl.to('#home .row img', {
         scale: 1,
-        duration: .3,
+        duration: .5,
         ease: Expo.easeInOut,
     })
-   
+    tl.from('.imgright .imgcontainer:nth-child(1) ', {
+        y:-300,
+        duration: .3,
+        Stagger: .5,
+        delay:-.7,
+        ease: Expo.easeInOut,
+        
+    })
+    tl.to('.imgright .imgcontainer:nth-child(1) ', {
+        rotation:-20,
+        duration: .3,
+        Stagger: .5,
+        ease: Expo.easeInOut,
+        opacity: 1,
+        delay: -1,
+        
+       
+    })
+    tl.from('.imgright .imgcontainer:nth-child(2) ', {
+        y:-300,
+        duration: .3,
+        Stagger: .5,
+        delay: -.5,
+        ease: Expo.easeInOut,
+       
+    })
+    tl.to('.imgright .imgcontainer:nth-child(2) ', {
+        rotation:-15,
+        duration: .3,
+        Stagger: .5,
+        ease: Expo.easeInOut,
+        opacity: 1,
+        delay: -1,
+    })
+    tl.from('.imgright .imgcontainer:nth-child(3) ', {
+        y:-300,
+        duration: .3,
+        Stagger: .5,
+        delay: -.3,
+        ease: Expo.easeInOut,
+    })
+    tl.to('.imgright .imgcontainer:nth-child(3) ', {
+        rotation:-5,
+        duration: .3,
+        Stagger: .5,
+        ease: Expo.easeInOut,
+        opacity: 1,
+        delay: -1,
+    })
+
 }
 
 function logoInitialize(){    
@@ -103,7 +152,6 @@ function cardHoverEffect(){
         container.addEventListener('mousemove', function(dots){
         document.querySelector("#cursor").children[dots.target.dataset.index].style.opacity = 1;
         showingImage = dots.target;
-        console.log(dots.clientX, dots.clientY)
         document.querySelector("#cursor").children[dots.target.dataset.index].style.transform = `translate(${dots.clientX}px, ${dots.clientY}px)`;
         showingImage.style.filter = "grayscale()"; 
 
